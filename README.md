@@ -1,2 +1,3 @@
 # LandCoverClassification
 This project uses multispectral images taken by the Landsat-8 satellite at two different times to categorize changes in land cover over time. The spectral indices—NDVI for vegetation, NDWI for water bodies, and NDBI for built-up areas—are calculated as the basis for the classification.
+The images, downloaded from Google Earth Engine (refer MultispectralImage code), include bands B2, B3, B4, B5, and B6, which are used for calculating NDVI, NDWI, and NDBI. These images are saved in .tif format on Google Drive. The google drive path for the images needs to be updated as per the image location in the google drive.
