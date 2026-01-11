@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "LULC Analysis",
+  "name": "LULC Change Detection Analysis",
   "icons": [
     {
       "src": "favicon.ico",
