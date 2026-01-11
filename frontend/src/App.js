@@ -95,7 +95,7 @@ function App() {
       }, 500);
 
       const response = await axios.post(
-        "http://localhost:8000/analyze",
+        "https://landcoverclassification.onrender.com/analyze",
         formData,
         { 
           timeout: 300000,
@@ -144,7 +144,7 @@ function App() {
 
   const downloadFile = async (url, filename) => {
     try {
-      const response = await fetch(`http://localhost:8000${url}`);
+      const response = await fetch(`https://landcoverclassification.onrender.com${url}`);
       const blob = await response.blob();
       const downloadUrl = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
@@ -252,7 +252,7 @@ function App() {
           <div className="preview-grid">
             <div className="preview-item">
               <img
-                src={`http://localhost:8000${results.outputs.preview_image1}?t=${Date.now()}`}
+                src={`https://landcoverclassification.onrender.com${results.outputs.preview_image1}?t=${Date.now()}`}
                 alt="First satellite preview"
                 className="preview-image"
                 onError={(e) => {
@@ -264,7 +264,7 @@ function App() {
             </div>
             <div className="preview-item">
               <img
-                src={`http://localhost:8000${results.outputs.preview_image2}?t=${Date.now()}`}
+                src={`https://landcoverclassification.onrender.com${results.outputs.preview_image2}?t=${Date.now()}`}
                 alt="Second satellite preview"
                 className="preview-image"
                 onError={(e) => {
@@ -332,7 +332,7 @@ function App() {
           <h3>Binary Change Detection Map</h3>
           <div className="output-item">
             <img
-              src={`http://localhost:8000${results.outputs.change_map}?t=${Date.now()}`}
+              src={`https://landcoverclassification.onrender.com${results.outputs.change_map}?t=${Date.now()}`}
               alt="Change Map"
               className="output-image"
               onError={(e) => console.error("Error loading change map")}
@@ -349,7 +349,7 @@ function App() {
           <h3>Land Cover Comparison Graph</h3>
           <div className="output-item">
             <img
-              src={`http://localhost:8000${results.outputs.comparison_graph}?t=${Date.now()}`}
+              src={`https://landcoverclassification.onrender.com${results.outputs.comparison_graph}?t=${Date.now()}`}
               alt="Comparison Graph"
               className="output-image"
               onError={(e) => console.error("Error loading comparison graph")}
