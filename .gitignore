@@ -1,0 +1,16 @@
+# Python
+backend-python/venv/
+backend-python/__pycache__/
+*.pyc
+
+# Node / React
+frontend/node_modules/
+
+# Outputs
+backend-python/outputs/
+*.png
+*.csv
+
+# OS / Editor
+.DS_Store
+.vscode/
