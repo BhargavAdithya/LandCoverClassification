@@ -38,6 +38,7 @@ function App() {
       
       setImage1(file);
       setImage1Name(file.name);
+      setResults(null); 
     }
   };
 
@@ -63,6 +64,7 @@ function App() {
       
       setImage2(file);
       setImage2Name(file.name);
+      setResults(null);
     }
   };
 
@@ -218,7 +220,7 @@ function App() {
         )}
       </div>
 
-      <button onClick={analyze} disabled={loading || !image1 || !image2}>
+      <button onClick={analyze} disabled={loading || !image1 || !image2 || results}>
         {loading ? "Processing..." : "Run Analysis"}
       </button>
 
