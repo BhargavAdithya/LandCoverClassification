@@ -68,6 +68,24 @@ function App() {
     }
   };
 
+  const handleDeleteImage1 = () => {
+    setImage1(null);
+    setImage1Name("");
+    setResults(null);
+    setError(null);
+    // Reset the file input
+    document.getElementById('file1').value = null;
+  };
+
+  const handleDeleteImage2 = () => {
+    setImage2(null);
+    setImage2Name("");
+    setResults(null);
+    setError(null);
+    // Reset the file input
+    document.getElementById('file2').value = null;
+  };
+
   const analyze = async () => {
     if (!image1 || !image2) {
       setError("Please select both images");
@@ -177,7 +195,7 @@ function App() {
       )}
 
       <div className="file-input-wrapper">
-        <input 
+      <input 
           type="file" 
           id="file1" 
           onChange={handleImage1Change}
@@ -194,6 +212,13 @@ function App() {
             <span className="file-size">
               {(image1.size / (1024 * 1024)).toFixed(2)} MB
             </span>
+            <button 
+              className="delete-file-btn" 
+              onClick={handleDeleteImage1}
+              type="button"
+            >
+              🗑️ Remove
+            </button>
           </div>
         )}
       </div>
@@ -216,6 +241,13 @@ function App() {
             <span className="file-size">
               {(image2.size / (1024 * 1024)).toFixed(2)} MB
             </span>
+            <button 
+              className="delete-file-btn" 
+              onClick={handleDeleteImage2}
+              type="button"
+            >
+              🗑️ Remove
+            </button>
           </div>
         )}
       </div>
